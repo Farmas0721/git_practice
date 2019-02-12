@@ -17,16 +17,156 @@
                     <view key="view" contentMode="scaleToFill" id="FxM-YA-rcD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-JE-iRg">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="498" id="2WA-Dn-HyG"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yFT-Xg-tRB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yFT-Xg-tRB" id="3me-fM-AQG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FxM-YA-rcD" id="muc-s1-MZV"/>
+                                    <outlet property="delegate" destination="FxM-YA-rcD" id="dgs-lm-f1L"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-xz-fAh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8hY-R6-xbP" id="6O0-lK-3KE"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R3A-JE-iRg" firstAttribute="top" secondItem="ZYO-xz-fAh" secondAttribute="bottom" id="9Fn-GR-puX"/>
+                            <constraint firstItem="R3A-JE-iRg" firstAttribute="leading" secondItem="FxM-YA-rcD" secondAttribute="leading" id="Dp5-M2-atX"/>
+                            <constraint firstItem="R3A-JE-iRg" firstAttribute="bottom" secondItem="kIO-Ji-fsF" secondAttribute="bottom" id="PAa-b3-NZu"/>
+                            <constraint firstAttribute="trailing" secondItem="R3A-JE-iRg" secondAttribute="trailing" id="Sld-wh-EYT"/>
+                            <constraint firstItem="R3A-JE-iRg" firstAttribute="leading" secondItem="ZYO-xz-fAh" secondAttribute="leading" id="XQs-Ex-4L9"/>
+                            <constraint firstItem="R3A-JE-iRg" firstAttribute="trailing" secondItem="ZYO-xz-fAh" secondAttribute="trailing" id="XeC-Wa-TzX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kIO-Ji-fsF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Compose" id="xEH-WP-ZVU"/>
-                    <navigationItem key="navigationItem" title="Last Done" id="xKq-db-Y3f"/>
+                    <navigationItem key="navigationItem" title="Last Done" id="xKq-db-Y3f">
+                        <rightBarButtonItems>
+                            <barButtonItem id="You-t3-3sS"/>
+                            <barButtonItem image="プラス" id="grL-cQ-7NO">
+                                <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <segue destination="9MU-NG-tez" kind="show" id="sBq-Bl-9JK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="IBI-0g-ZaV" id="wb9-0G-XRW"/>
+                        <outlet property="tableView" destination="R3A-JE-iRg" id="cDL-rM-rEL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pE-vO-yHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="IBI-0g-ZaV">
+                    <connections>
+                        <outlet property="delegate" destination="8hY-R6-xbP" id="rmB-bc-rdH"/>
+                        <outlet property="searchBar" destination="ZYO-xz-fAh" id="2Ot-0G-K6w"/>
+                        <outlet property="searchContentsController" destination="8hY-R6-xbP" id="saO-JL-Qz0"/>
+                        <outlet property="searchResultsDataSource" destination="8hY-R6-xbP" id="zMw-HZ-ch9"/>
+                        <outlet property="searchResultsDelegate" destination="8hY-R6-xbP" id="zvS-pr-lFC"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1036" y="68.815592203898049"/>
+        </scene>
+        <!--追加-->
+        <scene sceneID="0gS-OQ-6QU">
+            <objects>
+                <viewController id="9MU-NG-tez" customClass="addHomeViewController" customModule="p2fack_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="APH-xc-od4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="O13-gE-qUy">
+                                <rect key="frame" x="58" y="102" width="259" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-jF-0Wq">
+                                <rect key="frame" x="58" y="167" width="259" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="ido-cU-5K6">
+                                <rect key="frame" x="58" y="232" width="259" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="vY4-JB-oQI">
+                                <rect key="frame" x="58" y="357" width="259" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-Ly-gZ8">
+                                <rect key="frame" x="58" y="495" width="259" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-fl-Gy1">
+                                <rect key="frame" x="58" y="430" width="259" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="テキストフィールド">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="photo">
+                                            <attributes>
+                                                <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="picChoice:" destination="9MU-NG-tez" eventType="touchUpInside" id="867-Un-97W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="bYx-o9-FO2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="textField" destination="O13-gE-qUy" id="kHc-Is-Lce"/>
+                        <outlet property="textField2" destination="kk0-jF-0Wq" id="IQc-fI-qNU"/>
+                        <outlet property="textField3" destination="ido-cU-5K6" id="8Fa-Ke-bN3"/>
+                        <outlet property="textMemo" destination="vY4-JB-oQI" id="XfR-jE-xjl"/>
+                        <outlet property="voice" destination="iHQ-Ly-gZ8" id="4Fb-0c-d80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCR-If-wuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917.5999999999999" y="68.815592203898049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p74-Z2-XI3">
@@ -49,5 +189,7 @@
     </scenes>
     <resources>
         <image name="Compose" width="16" height="16"/>
+        <image name="テキストフィールド" width="378" height="68"/>
+        <image name="プラス" width="27" height="26"/>
     </resources>
 </document>
