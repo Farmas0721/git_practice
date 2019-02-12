@@ -16,7 +16,6 @@ class addHomeViewController: UIViewController,UIImagePickerControllerDelegate,UI
     @IBOutlet weak var textMemo: UITextField!
     @IBOutlet weak var voice: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.placeholder = "やったこと"
@@ -50,6 +49,10 @@ class addHomeViewController: UIViewController,UIImagePickerControllerDelegate,UI
             // ビューに表示
             self.present(pickerView, animated: true)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 
