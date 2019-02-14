@@ -9,18 +9,27 @@
 import UIKit
 import AVFoundation
 
-class VoiceRecordData: NSObject {
-    let path:NSData
+class RecordedVoice: NSObject {
+    var path:String = ""
+    var name:String = ""
+    
     let kPath = "PATH"
+    let kName = "NAME"
     
     var audioPlayer: AVAudioPlayer!
     
-    init(path: NSData) {
+    init(path: String, name: String) {
         self.path = path
+        self.name = name
     }
     
-    init(dictionaly:[String:Any] ) {
-        path = dictionaly[kPath] as! NSData
+    init(dictionary:[String:Any] ) {
+        path = dictionary[kPath] as! String
+        name = dictionary[kName] as! String
+    }
+    
+    func dictionaryFromVoice() -> [String:Any]{
+        return [kPath : path]
     }
     
 }

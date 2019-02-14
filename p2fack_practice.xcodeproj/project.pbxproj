@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410E9C1D2215F89800F77FAD /* VoiceRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E9C1C2215F89800F77FAD /* VoiceRecordData.swift */; };
+		410E9C22221604B400F77FAD /* あんたは私の何を知る.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C1F221604B400F77FAD /* あんたは私の何を知る.mp3 */; };
+		410E9C23221604B400F77FAD /* 好きだったこの場所.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C20221604B400F77FAD /* 好きだったこの場所.mp3 */; };
+		410E9C24221604B400F77FAD /* 黒い羊 2 .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C21221604B400F77FAD /* 黒い羊 2 .mp3 */; };
+		410E9C2622160AF600F77FAD /* 僕は嫌だ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C2522160AF500F77FAD /* 僕は嫌だ.mp3 */; };
 		E868A563220E46A0006F419B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A562220E46A0006F419B /* AppDelegate.swift */; };
 		E868A56A220E46A6006F419B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E868A569220E46A6006F419B /* Assets.xcassets */; };
 		E868A56D220E46A6006F419B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E868A56B220E46A6006F419B /* LaunchScreen.storyboard */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410E9C1C2215F89800F77FAD /* VoiceRecordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecordData.swift; sourceTree = "<group>"; };
+		410E9C1F221604B400F77FAD /* あんたは私の何を知る.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "あんたは私の何を知る.mp3"; sourceTree = "<group>"; };
+		410E9C20221604B400F77FAD /* 好きだったこの場所.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "好きだったこの場所.mp3"; sourceTree = "<group>"; };
+		410E9C21221604B400F77FAD /* 黒い羊 2 .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "黒い羊 2 .mp3"; sourceTree = "<group>"; };
+		410E9C2522160AF500F77FAD /* 僕は嫌だ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "僕は嫌だ.mp3"; sourceTree = "<group>"; };
 		E868A55F220E46A0006F419B /* p2fack_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2fack_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E868A562220E46A0006F419B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E868A569220E46A6006F419B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +57,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410E9C1A2215F89800F77FAD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				410E9C1E2216046700F77FAD /* audio */,
+				410E9C1B2215F89800F77FAD /* model */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		410E9C1B2215F89800F77FAD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				410E9C1C2215F89800F77FAD /* VoiceRecordData.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		410E9C1E2216046700F77FAD /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				410E9C1F221604B400F77FAD /* あんたは私の何を知る.mp3 */,
+				410E9C20221604B400F77FAD /* 好きだったこの場所.mp3 */,
+				410E9C21221604B400F77FAD /* 黒い羊 2 .mp3 */,
+				410E9C2522160AF500F77FAD /* 僕は嫌だ.mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		E868A556220E46A0006F419B = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +106,7 @@
 			children = (
 				E868A562220E46A0006F419B /* AppDelegate.swift */,
 				E868A56E220E46A6006F419B /* Info.plist */,
+				410E9C1A2215F89800F77FAD /* src */,
 				E868A583220FFB0B006F419B /* No Touch */,
 				E868A587220FFC7F006F419B /* Home */,
 				E868A588220FFC95006F419B /* Voice */,
@@ -172,10 +211,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410E9C24221604B400F77FAD /* 黒い羊 2 .mp3 in Resources */,
+				410E9C22221604B400F77FAD /* あんたは私の何を知る.mp3 in Resources */,
 				E868A580220FF2E3006F419B /* Calender.storyboard in Resources */,
+				410E9C2622160AF600F77FAD /* 僕は嫌だ.mp3 in Resources */,
 				E868A586220FFBC2006F419B /* Main.storyboard in Resources */,
 				E868A56D220E46A6006F419B /* LaunchScreen.storyboard in Resources */,
 				E868A58F220FFD97006F419B /* Home.storyboard in Resources */,
+				410E9C23221604B400F77FAD /* 好きだったこの場所.mp3 in Resources */,
 				E868A56A220E46A6006F419B /* Assets.xcassets in Resources */,
 				E868A57E220FF2A5006F419B /* Voice.storyboard in Resources */,
 			);
@@ -189,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E868A58D220FFD69006F419B /* cale_ViewController.swift in Sources */,
+				410E9C1D2215F89800F77FAD /* VoiceRecordData.swift in Sources */,
 				E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */,
 				E868A563220E46A0006F419B /* AppDelegate.swift in Sources */,
 				E868A58A220FFCD0006F419B /* voice_ViewController.swift in Sources */,
