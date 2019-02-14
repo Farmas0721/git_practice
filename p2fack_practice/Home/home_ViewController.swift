@@ -9,30 +9,37 @@
 import UIKit
 
 let TODO = ["牛乳を買う", "掃除をする", "アプリ開発の勉強をする"]
-
+let TIME = ["2","3","4"]
 
 class home_ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return TODO.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        // セルに表示する値を設定する
-        cell.textLabel!.text = TODO[indexPath.row]
-        return cell
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.register(UINib(nibName:"TableViewCell",bundle:nil), forCellReuseIdentifier:"TableViewCell")
     }
-
-
+    
+    //数を指定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return TODO.count
+    }
+    
+    //セルの内容
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        // セルに表示する値を設定する
+        cell.taskTime!.text = TIME[indexPath.row]
+        cell.taskName!.text = TODO[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 100
+    }
+    
 }

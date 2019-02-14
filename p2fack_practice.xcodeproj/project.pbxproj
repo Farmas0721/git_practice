@@ -18,6 +18,8 @@
 		E868A58F220FFD97006F419B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E868A58E220FFD97006F419B /* Home.storyboard */; };
 		E868A591220FFE15006F419B /* home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A590220FFE15006F419B /* home_ViewController.swift */; };
 		E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A5922211CDB5006F419B /* addHomeViewController.swift */; };
+		E868A59A2212FDAA006F419B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A5982212FDAA006F419B /* TableViewCell.swift */; };
+		E868A59B2212FDAA006F419B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E868A5992212FDAA006F419B /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E868A58E220FFD97006F419B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E868A590220FFE15006F419B /* home_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_ViewController.swift; sourceTree = "<group>"; };
 		E868A5922211CDB5006F419B /* addHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHomeViewController.swift; sourceTree = "<group>"; };
+		E868A5982212FDAA006F419B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E868A5992212FDAA006F419B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				E868A58E220FFD97006F419B /* Home.storyboard */,
 				E868A590220FFE15006F419B /* home_ViewController.swift */,
 				E868A5922211CDB5006F419B /* addHomeViewController.swift */,
+				E868A5982212FDAA006F419B /* TableViewCell.swift */,
+				E868A5992212FDAA006F419B /* TableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 			files = (
 				E868A580220FF2E3006F419B /* Calender.storyboard in Resources */,
 				E868A586220FFBC2006F419B /* Main.storyboard in Resources */,
+				E868A59B2212FDAA006F419B /* TableViewCell.xib in Resources */,
 				E868A56D220E46A6006F419B /* LaunchScreen.storyboard in Resources */,
 				E868A58F220FFD97006F419B /* Home.storyboard in Resources */,
 				E868A56A220E46A6006F419B /* Assets.xcassets in Resources */,
@@ -191,6 +198,7 @@
 				E868A58D220FFD69006F419B /* cale_ViewController.swift in Sources */,
 				E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */,
 				E868A563220E46A0006F419B /* AppDelegate.swift in Sources */,
+				E868A59A2212FDAA006F419B /* TableViewCell.swift in Sources */,
 				E868A58A220FFCD0006F419B /* voice_ViewController.swift in Sources */,
 				E868A591220FFE15006F419B /* home_ViewController.swift in Sources */,
 			);

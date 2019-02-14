@@ -24,16 +24,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="498" id="2WA-Dn-HyG"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yFT-Xg-tRB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yFT-Xg-tRB" id="3me-fM-AQG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="FxM-YA-rcD" id="muc-s1-MZV"/>
                                     <outlet property="delegate" destination="FxM-YA-rcD" id="dgs-lm-f1L"/>
@@ -62,10 +52,10 @@
                     <navigationItem key="navigationItem" title="Last Done" id="xKq-db-Y3f">
                         <rightBarButtonItems>
                             <barButtonItem id="You-t3-3sS"/>
-                            <barButtonItem image="プラス" id="grL-cQ-7NO">
+                            <barButtonItem systemItem="add" id="grL-cQ-7NO">
                                 <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
-                                    <segue destination="9MU-NG-tez" kind="show" id="sBq-Bl-9JK"/>
+                                    <segue destination="9MU-NG-tez" kind="show" id="cTY-a4-44C"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -154,7 +144,11 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="bYx-o9-FO2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7"/>
+                    <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cLf-to-EKi">
+                            <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="textField" destination="O13-gE-qUy" id="kHc-Is-Lce"/>
@@ -166,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCR-If-wuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917.5999999999999" y="68.815592203898049"/>
+            <point key="canvasLocation" x="1918" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p74-Z2-XI3">
@@ -190,6 +184,5 @@
     <resources>
         <image name="Compose" width="16" height="16"/>
         <image name="テキストフィールド" width="378" height="68"/>
-        <image name="プラス" width="27" height="26"/>
     </resources>
 </document>
