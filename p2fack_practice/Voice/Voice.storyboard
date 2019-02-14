@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XVR-aZ-zEA">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,26 +15,40 @@
             <objects>
                 <viewController id="Amm-ne-DUz" customClass="voice_ViewController" customModule="p2fack_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDW-mz-CrD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nC-j5-nJM">
+                                <rect key="frame" x="132" y="529" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="voiceButtun"/>
+                                <connections>
+                                    <action selector="voice:" destination="Amm-ne-DUz" eventType="touchUpInside" id="Fy3-lh-TVn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="ZBH-OC-Sen"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="vol" id="ugp-Xu-SUd"/>
                     <navigationItem key="navigationItem" title="Voice List" id="Y1d-M0-yaP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="voice" destination="4nC-j5-nJM" id="k6f-jF-sja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RP-SU-CAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="142.57871064467767"/>
+            <point key="canvasLocation" x="1082" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PGH-ev-YvP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="209-U3-zmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XVR-aZ-zEA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hx1-Qm-GAU">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -42,12 +56,12 @@
                         <segue destination="Amm-ne-DUz" kind="relationship" relationship="rootViewController" id="om5-Xs-xjI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="209-U3-zmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.80000000000000004" y="142.57871064467767"/>
         </scene>
     </scenes>
     <resources>
+        <image name="voiceButtun" width="173" height="168"/>
         <image name="vol" width="9" height="16"/>
     </resources>
 </document>

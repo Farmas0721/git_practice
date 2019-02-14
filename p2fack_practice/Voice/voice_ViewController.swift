@@ -10,10 +10,23 @@ import UIKit
 
 class voice_ViewController: UIViewController {
 
+    @IBOutlet weak var voice: UIButton!
+    let image0:UIImage = UIImage(named:"voiceButtun.png")!
+    let image1:UIImage = UIImage(named:"stopButtun.png")!
+   var count = 0
+  
+    @IBAction func voice(_ sender: Any) {
+        count += 1
+        if(count%2 == 0){
+            voice.setImage(image0, for: .normal)
+        }else{
+            voice.setImage(image1, for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+              // Do any additional setup after loading the view.
     }
     
 
