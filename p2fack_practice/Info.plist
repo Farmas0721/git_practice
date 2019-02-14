@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Privacy – Photo Library Usage Description</key>
+	<string>カメラロールの表示をします</string>
 </dict>
 </plist>

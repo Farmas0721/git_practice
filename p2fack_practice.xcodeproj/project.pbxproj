@@ -17,6 +17,7 @@
 		E868A58D220FFD69006F419B /* cale_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A58C220FFD69006F419B /* cale_ViewController.swift */; };
 		E868A58F220FFD97006F419B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E868A58E220FFD97006F419B /* Home.storyboard */; };
 		E868A591220FFE15006F419B /* home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A590220FFE15006F419B /* home_ViewController.swift */; };
+		E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A5922211CDB5006F419B /* addHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E868A58C220FFD69006F419B /* cale_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cale_ViewController.swift; sourceTree = "<group>"; };
 		E868A58E220FFD97006F419B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E868A590220FFE15006F419B /* home_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_ViewController.swift; sourceTree = "<group>"; };
+		E868A5922211CDB5006F419B /* addHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				E868A58E220FFD97006F419B /* Home.storyboard */,
 				E868A590220FFE15006F419B /* home_ViewController.swift */,
+				E868A5922211CDB5006F419B /* addHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E868A58D220FFD69006F419B /* cale_ViewController.swift in Sources */,
+				E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */,
 				E868A563220E46A0006F419B /* AppDelegate.swift in Sources */,
 				E868A58A220FFCD0006F419B /* voice_ViewController.swift in Sources */,
 				E868A591220FFE15006F419B /* home_ViewController.swift in Sources */,
