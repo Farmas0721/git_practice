@@ -28,6 +28,10 @@ class home_ViewController: UIViewController,UITableViewDelegate, UITableViewData
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     //数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskList.count
