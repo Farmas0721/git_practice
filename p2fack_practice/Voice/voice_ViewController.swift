@@ -13,8 +13,9 @@ class voice_ViewController: UIViewController, AVAudioPlayerDelegate{
 
     @IBOutlet weak var voice: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
-    let image0:UIImage = UIImage(named:"voiceButtun.png")!
+    var reserve = -1
+    var Rcount = 0
+    let image0:UIImage = UIImage(named:"recordIcon.png")!
     let image1:UIImage = UIImage(named:"stopButtun.png")!
     //userDefaultに保存するデータのkey
     let kRecordedVoices = "RECORDED_VOICES"
@@ -31,10 +32,8 @@ class voice_ViewController: UIViewController, AVAudioPlayerDelegate{
     @IBAction func voice(_ sender: Any) {
         count += 1
         if(count%2 == 0){
-            audioPlayer.stop()
             voice.setImage(image0, for: .normal)
         }else{
-            audioPlayer.play()
             voice.setImage(image1, for: .normal)
         }
     }
@@ -171,8 +170,23 @@ extension voice_ViewController: UITableViewDataSource, UITableViewDelegate{
         switch indexPath.section {
         case 0:
             setAudioPlayer(audioPath: defautVoices[indexPath.row].path)
+            if(reserve == indexPath.row && Rcount == 1){
+                audioPlayer.stop()
+                Rcount = 0
+            }else if(reserve == indexPath.row && Rcount == 0){
+                audioPlayer.play()
+                Rcount = 1
+            }else if(reserve != indexPath.row && Rcount == 0){
+                audioPlayer.play()
+                Rcount = 1
+            }else if(reserve != indexPath.row && Rcount == 1){
+                audioPlayer.play()
+                Rcount = 1
+            }
+            reserve = indexPath.row
         case 1:
             setAudioPlayer(audioPath: recordedVoices[indexPath.row].path)
+            audioPlayer.stop()
         default: break
             
         }

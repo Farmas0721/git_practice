@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nC-j5-nJM">
                                 <rect key="frame" x="132" y="653" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="voiceButtun"/>
+                                <state key="normal" title="Button" image="recordIcon.png"/>
                                 <connections>
                                     <action selector="voice:" destination="Amm-ne-DUz" eventType="touchUpInside" id="Fy3-lh-TVn"/>
                                 </connections>
@@ -84,7 +84,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="voiceButtun" width="173" height="168"/>
+        <image name="recordIcon.png" width="173" height="168"/>
         <image name="vol" width="9" height="16"/>
     </resources>
 </document>
