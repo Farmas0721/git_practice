@@ -52,7 +52,9 @@ class addHomeViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     @IBAction func addTask(_ sender: UIBarButtonItem) {
-        
+        taskList.append(textField.text!)
+        textField.text = ""
+        UserDefaults.standard.set(taskList, forKey: "TaskList" )
     }
     
     

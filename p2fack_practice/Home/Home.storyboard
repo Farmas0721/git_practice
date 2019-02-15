@@ -53,7 +53,6 @@
                         <rightBarButtonItems>
                             <barButtonItem id="You-t3-3sS"/>
                             <barButtonItem systemItem="add" id="grL-cQ-7NO">
-                                <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <segue destination="9MU-NG-tez" kind="show" id="cTY-a4-44C"/>
                                 </connections>
@@ -87,35 +86,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="O13-gE-qUy">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="O13-gE-qUy">
                                 <rect key="frame" x="58" y="102" width="259" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-jF-0Wq">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-jF-0Wq">
                                 <rect key="frame" x="58" y="167" width="259" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="ido-cU-5K6">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="ido-cU-5K6">
                                 <rect key="frame" x="58" y="232" width="259" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="vY4-JB-oQI">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="vY4-JB-oQI">
                                 <rect key="frame" x="58" y="357" width="259" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-Ly-gZ8">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-Ly-gZ8">
                                 <rect key="frame" x="58" y="495" width="259" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -125,7 +124,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-fl-Gy1">
                                 <rect key="frame" x="58" y="430" width="259" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="テキストフィールド">
+                                <state key="normal" backgroundImage="テキストフィールド">
                                     <attributedString key="attributedTitle">
                                         <fragment content="photo">
                                             <attributes>
@@ -146,7 +145,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="cLf-to-EKi">
-                            <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <action selector="addTask:" destination="9MU-NG-tez" id="qa6-7e-hMv"/>
                             </connections>
@@ -186,6 +184,6 @@
     </scenes>
     <resources>
         <image name="Compose" width="16" height="16"/>
-        <image name="テキストフィールド" width="378" height="68"/>
+        <image name="テキストフィールド" width="378" height="68"/>
     </resources>
 </document>
