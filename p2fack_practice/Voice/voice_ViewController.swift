@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class voice_ViewController: UIViewController, AVAudioPlayerDelegate{
+class voice_ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate{
 
     @IBOutlet weak var voice: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -24,23 +24,27 @@ class voice_ViewController: UIViewController, AVAudioPlayerDelegate{
     
     var count = 0
     var audioPlayer:AVAudioPlayer!
+    var audioRecorder: AVAudioRecorder!
     //録音音声保存用のデータクラス
     var recordedVoices = [RecordedVoice]()
     //デフォルトで入れておく音声
     var defautVoices = [RecordedVoice]()
-    
+
     @IBAction func voice(_ sender: Any) {
         count += 1
         if(count%2 == 0){
+            audioRecorder.stop()
+            
+            tableView.reloadData()
             voice.setImage(image0, for: .normal)
         }else{
+            record()
             voice.setImage(image1, for: .normal)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
  
         load()
         getDefaultAudio()
@@ -73,7 +77,6 @@ class voice_ViewController: UIViewController, AVAudioPlayerDelegate{
         count += 1
         voice.setImage(image0, for: .normal)
     }
-    
     //defaultの音声取得
     func getDefaultAudio(){
         for def in defaults{
@@ -81,11 +84,43 @@ class voice_ViewController: UIViewController, AVAudioPlayerDelegate{
                 print("そのファイルパス間違ってるから")
                 return
             }
+            print(path)
             defautVoices.append(RecordedVoice(path: path, name: def))
+            
         }
-
+    }
+    //音声保存
+    func record(){
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try AVAudioSessionPatch.setSession(session, category: .playAndRecord, with: [.defaultToSpeaker, .duckOthers])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 44100,
+            AVNumberOfChannelsKey: 2,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        audioRecorder = try! AVAudioRecorder(url: getURL(), settings: settings)
+        audioRecorder.delegate = self
+        audioRecorder.record()
         
     }
+    
+    func getURL() -> URL{
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsDirect = paths[0]
+        let url = docsDirect.appendingPathComponent("recording.m4a")
+        print(url.path)
+        recordedVoices.append(RecordedVoice(path: url.path, name: "recording.m4a"))
+        return url
+    }
+    
     // 読み込み処理
     func load() {
         // Dictionary配列を読み込み
@@ -186,7 +221,7 @@ extension voice_ViewController: UITableViewDataSource, UITableViewDelegate{
             reserve = indexPath.row
         case 1:
             setAudioPlayer(audioPath: recordedVoices[indexPath.row].path)
-            audioPlayer.stop()
+            audioPlayer.play()
         default: break
             
         }

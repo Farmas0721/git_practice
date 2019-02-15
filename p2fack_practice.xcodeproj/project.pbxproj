@@ -12,6 +12,7 @@
 		410E9C23221604B400F77FAD /* 好きだったこの場所.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C20221604B400F77FAD /* 好きだったこの場所.mp3 */; };
 		410E9C24221604B400F77FAD /* 黒い羊 2 .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C21221604B400F77FAD /* 黒い羊 2 .mp3 */; };
 		410E9C2622160AF600F77FAD /* 僕は嫌だ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C2522160AF500F77FAD /* 僕は嫌だ.mp3 */; };
+		410E9C2A2217254900F77FAD /* AVAudioSessionPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E9C292217254900F77FAD /* AVAudioSessionPatch.m */; };
 		E868A563220E46A0006F419B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A562220E46A0006F419B /* AppDelegate.swift */; };
 		E868A56A220E46A6006F419B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E868A569220E46A6006F419B /* Assets.xcassets */; };
 		E868A56D220E46A6006F419B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E868A56B220E46A6006F419B /* LaunchScreen.storyboard */; };
@@ -31,6 +32,9 @@
 		410E9C20221604B400F77FAD /* 好きだったこの場所.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "好きだったこの場所.mp3"; sourceTree = "<group>"; };
 		410E9C21221604B400F77FAD /* 黒い羊 2 .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "黒い羊 2 .mp3"; sourceTree = "<group>"; };
 		410E9C2522160AF500F77FAD /* 僕は嫌だ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "僕は嫌だ.mp3"; sourceTree = "<group>"; };
+		410E9C282217254900F77FAD /* p2fack_practice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "p2fack_practice-Bridging-Header.h"; sourceTree = "<group>"; };
+		410E9C292217254900F77FAD /* AVAudioSessionPatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVAudioSessionPatch.m; sourceTree = "<group>"; };
+		410E9C2B2217257700F77FAD /* AVAudioSessionPatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVAudioSessionPatch.h; sourceTree = "<group>"; };
 		E868A55F220E46A0006F419B /* p2fack_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2fack_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E868A562220E46A0006F419B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E868A569220E46A6006F419B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 		410E9C1A2215F89800F77FAD /* src */ = {
 			isa = PBXGroup;
 			children = (
+				410E9C272217251B00F77FAD /* Objectve-c */,
 				410E9C1E2216046700F77FAD /* audio */,
 				410E9C1B2215F89800F77FAD /* model */,
 			);
@@ -83,6 +88,16 @@
 				410E9C2522160AF500F77FAD /* 僕は嫌だ.mp3 */,
 			);
 			path = audio;
+			sourceTree = "<group>";
+		};
+		410E9C272217251B00F77FAD /* Objectve-c */ = {
+			isa = PBXGroup;
+			children = (
+				410E9C292217254900F77FAD /* AVAudioSessionPatch.m */,
+				410E9C2B2217257700F77FAD /* AVAudioSessionPatch.h */,
+				410E9C282217254900F77FAD /* p2fack_practice-Bridging-Header.h */,
+			);
+			path = "Objectve-c";
 			sourceTree = "<group>";
 		};
 		E868A556220E46A0006F419B = {
@@ -185,6 +200,7 @@
 				TargetAttributes = {
 					E868A55E220E46A0006F419B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -235,6 +251,7 @@
 				410E9C1D2215F89800F77FAD /* VoiceRecordData.swift in Sources */,
 				E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */,
 				E868A563220E46A0006F419B /* AppDelegate.swift in Sources */,
+				410E9C2A2217254900F77FAD /* AVAudioSessionPatch.m in Sources */,
 				E868A58A220FFCD0006F419B /* voice_ViewController.swift in Sources */,
 				E868A591220FFE15006F419B /* home_ViewController.swift in Sources */,
 			);
@@ -374,16 +391,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 65Z68H8WQ6;
+				DEVELOPMENT_TEAM = CXL7F9J64Z;
 				INFOPLIST_FILE = p2fack_practice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fuya.p2fack-practice";
+				PRODUCT_BUNDLE_IDENTIFIER = "fuya.p2fack-practice.asahi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "p2fack_practice/src/Objectve-c/p2fack_practice-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -393,16 +414,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 65Z68H8WQ6;
+				DEVELOPMENT_TEAM = CXL7F9J64Z;
 				INFOPLIST_FILE = p2fack_practice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fuya.p2fack-practice";
+				PRODUCT_BUNDLE_IDENTIFIER = "fuya.p2fack-practice.asahi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "p2fack_practice/src/Objectve-c/p2fack_practice-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
