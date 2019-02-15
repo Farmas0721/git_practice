@@ -22,6 +22,10 @@ class home_ViewController: UIViewController,UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         self.tableView.register(UINib(nibName:"TableViewCell",bundle:nil), forCellReuseIdentifier:"TableViewCell")
+        
+        if UserDefaults.standard.object(forKey: "TaskList") != nil {
+            taskList = UserDefaults.standard.object(forKey: "TaskList") as! [String]
+        }
     }
     
     //数を指定

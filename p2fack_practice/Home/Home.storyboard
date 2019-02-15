@@ -147,6 +147,9 @@
                     <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="cLf-to-EKi">
                             <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="addTask:" destination="9MU-NG-tez" id="qa6-7e-hMv"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="667"/>
