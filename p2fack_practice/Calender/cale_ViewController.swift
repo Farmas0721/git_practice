@@ -74,12 +74,12 @@ class cale_ViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let myBoundSize: CGFloat = UIScreen.main.bounds.size.width
-        let cellSize : CGFloat = myBoundSize / 7.5
+        let cellSize : CGFloat = myBoundSize / 8
         return CGSize(width: cellSize, height: cellSize)
     }
     
