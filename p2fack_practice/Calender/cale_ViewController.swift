@@ -63,9 +63,12 @@ class cale_ViewController: UIViewController, UICollectionViewDelegate, UICollect
             let label = UILabel()
             label.font = UIFont(name: "Arial", size: 17)
             label.text = "\(indexPath.row + weekdayAdding)"
+            //label.numberOfLines = 0
             label.sizeToFit()
-            label.center = cell.contentView.center
+            //label.center = CGPoint(x: cell.widthAnchor, y: cell.heightAnchor)
+            //label.center = cell.contentView.center
             cell.contentView.addSubview(label)
+            
         }
         else{
             cell.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
@@ -80,7 +83,8 @@ class cale_ViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let myBoundSize: CGFloat = UIScreen.main.bounds.size.width
         let cellSize : CGFloat = myBoundSize / 8
-        return CGSize(width: cellSize, height: cellSize)
+        let cellSizeheight : CGFloat = myBoundSize / 6
+        return CGSize(width: cellSize, height: cellSizeheight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -89,6 +93,10 @@ class cale_ViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
     }
     
     @IBAction func myActionZengetsu(_ sender: Any) {
