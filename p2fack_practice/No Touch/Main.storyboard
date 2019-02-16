@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +21,7 @@
                         <segue destination="MBb-li-hFU" kind="relationship" relationship="viewControllers" id="40l-jw-oAt"/>
                         <segue destination="4ay-sd-kcF" kind="relationship" relationship="viewControllers" id="jAD-vm-XAC"/>
                         <segue destination="b1I-H6-rhS" kind="relationship" relationship="viewControllers" id="vhI-gU-JT6"/>
+                        <segue destination="6nf-AS-eXc" kind="relationship" relationship="viewControllers" id="x0O-1P-zOz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uZ-Vs-R2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -47,6 +47,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rd2-r9-GYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="10"/>
+        </scene>
+        <!--p2p-->
+        <scene sceneID="K7w-0C-Smm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="p2p" id="6nf-AS-eXc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jsK-7P-eDf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jl5-Sz-8EE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="108"/>
         </scene>
         <!--Home-->
         <scene sceneID="kOg-p4-8Fx">
