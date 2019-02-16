@@ -68,13 +68,13 @@ class cale_ViewController: UIViewController, UICollectionViewDelegate, UICollect
             cell.contentView.addSubview(label)
         }
         else{
-            cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
