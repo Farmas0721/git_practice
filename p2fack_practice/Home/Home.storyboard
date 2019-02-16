@@ -24,16 +24,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="498" id="2WA-Dn-HyG"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yFT-Xg-tRB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yFT-Xg-tRB" id="3me-fM-AQG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="FxM-YA-rcD" id="muc-s1-MZV"/>
                                     <outlet property="delegate" destination="FxM-YA-rcD" id="dgs-lm-f1L"/>
@@ -62,10 +52,9 @@
                     <navigationItem key="navigationItem" title="Last Done" id="xKq-db-Y3f">
                         <rightBarButtonItems>
                             <barButtonItem id="You-t3-3sS"/>
-                            <barButtonItem image="プラス" id="grL-cQ-7NO">
-                                <color key="tintColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                            <barButtonItem systemItem="add" id="grL-cQ-7NO">
                                 <connections>
-                                    <segue destination="9MU-NG-tez" kind="show" id="sBq-Bl-9JK"/>
+                                    <segue destination="9MU-NG-tez" kind="show" id="cTY-a4-44C"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -97,45 +86,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="O13-gE-qUy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="O13-gE-qUy">
                                 <rect key="frame" x="58" y="102" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Wec-h5-BWH"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-jF-0Wq">
-                                <rect key="frame" x="58" y="167" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-Ly-gZ8">
+                                <rect key="frame" x="58" y="475" width="259" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="RyH-Y4-za0"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="ido-cU-5K6">
-                                <rect key="frame" x="58" y="232" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="vY4-JB-oQI">
-                                <rect key="frame" x="58" y="357" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-Ly-gZ8">
-                                <rect key="frame" x="58" y="495" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-fl-Gy1">
-                                <rect key="frame" x="58" y="430" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="テキストフィールド">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-fl-Gy1">
+                                <rect key="frame" x="58" y="240" width="259" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="5nr-rX-AjY"/>
+                                    <constraint firstAttribute="width" constant="259" id="DFm-dk-6OU"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="テキストフィールド">
                                     <attributedString key="attributedTitle">
                                         <fragment content="photo">
                                             <attributes>
@@ -150,17 +125,42 @@
                                     <action selector="picChoice:" destination="9MU-NG-tez" eventType="touchUpInside" id="867-Un-97W"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="テキストフィールド" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-jF-0Wq" customClass="DatePickerKeyboard" customModule="p2fack_practice" customModuleProvider="target">
+                                <rect key="frame" x="58" y="170" width="259" height="57"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="top" secondItem="bYx-o9-FO2" secondAttribute="top" constant="38" id="1eZ-zs-sLR"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="centerX" secondItem="APH-xc-od4" secondAttribute="centerX" id="2Px-Ov-uAT"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="trailing" secondItem="uY5-fl-Gy1" secondAttribute="trailing" id="4Iv-ts-a1K"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="trailing" secondItem="kk0-jF-0Wq" secondAttribute="trailing" id="6fx-Ng-L9o"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="leading" secondItem="iHQ-Ly-gZ8" secondAttribute="leading" id="AOb-Wy-mvb"/>
+                            <constraint firstItem="uY5-fl-Gy1" firstAttribute="top" secondItem="kk0-jF-0Wq" secondAttribute="bottom" constant="13" id="WtU-AS-ik3"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="leading" secondItem="bYx-o9-FO2" secondAttribute="leading" constant="58" id="e4f-Dc-MTT"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="leading" secondItem="kk0-jF-0Wq" secondAttribute="leading" id="fwZ-Ph-9B1"/>
+                            <constraint firstItem="uY5-fl-Gy1" firstAttribute="top" secondItem="APH-xc-od4" secondAttribute="top" constant="240" id="kgf-fi-ahp"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="trailing" secondItem="iHQ-Ly-gZ8" secondAttribute="trailing" id="pVX-8j-kh3"/>
+                            <constraint firstItem="O13-gE-qUy" firstAttribute="leading" secondItem="uY5-fl-Gy1" secondAttribute="leading" id="qXq-6I-184"/>
+                            <constraint firstItem="kk0-jF-0Wq" firstAttribute="top" secondItem="O13-gE-qUy" secondAttribute="bottom" constant="11" id="tzf-fj-cVc"/>
+                            <constraint firstItem="bYx-o9-FO2" firstAttribute="bottom" secondItem="iHQ-Ly-gZ8" secondAttribute="bottom" constant="86" id="xYK-sG-5TM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bYx-o9-FO2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7"/>
+                    <navigationItem key="navigationItem" title="追加" id="Elm-Ox-yt7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cLf-to-EKi">
+                            <connections>
+                                <action selector="addTask:" destination="9MU-NG-tez" id="qa6-7e-hMv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="textField" destination="O13-gE-qUy" id="kHc-Is-Lce"/>
                         <outlet property="textField2" destination="kk0-jF-0Wq" id="IQc-fI-qNU"/>
-                        <outlet property="textField3" destination="ido-cU-5K6" id="8Fa-Ke-bN3"/>
-                        <outlet property="textMemo" destination="vY4-JB-oQI" id="XfR-jE-xjl"/>
                         <outlet property="voice" destination="iHQ-Ly-gZ8" id="4Fb-0c-d80"/>
                     </connections>
                 </viewController>
@@ -189,7 +189,6 @@
     </scenes>
     <resources>
         <image name="Compose" width="16" height="16"/>
-        <image name="テキストフィールド" width="378" height="68"/>
-        <image name="プラス" width="27" height="26"/>
+        <image name="テキストフィールド" width="378" height="68"/>
     </resources>
 </document>

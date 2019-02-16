@@ -15,6 +15,9 @@
 		410E9C2A2217254900F77FAD /* AVAudioSessionPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E9C292217254900F77FAD /* AVAudioSessionPatch.m */; };
 		410E9C2F2217EA5000F77FAD /* p2p.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C2E2217EA5000F77FAD /* p2p.storyboard */; };
 		410E9C312217EA7000F77FAD /* p2p_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E9C302217EA7000F77FAD /* p2p_ViewController.swift */; };
+		410E9C332218201900F77FAD /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E9C322218201900F77FAD /* data.swift */; };
+		410E9C352218206100F77FAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E9C342218206100F77FAD /* TableViewCell.swift */; };
+		410E9C37221820BB00F77FAD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410E9C36221820BB00F77FAD /* TableViewCell.xib */; };
 		E868A563220E46A0006F419B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868A562220E46A0006F419B /* AppDelegate.swift */; };
 		E868A56A220E46A6006F419B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E868A569220E46A6006F419B /* Assets.xcassets */; };
 		E868A56D220E46A6006F419B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E868A56B220E46A6006F419B /* LaunchScreen.storyboard */; };
@@ -39,6 +42,9 @@
 		410E9C2B2217257700F77FAD /* AVAudioSessionPatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVAudioSessionPatch.h; sourceTree = "<group>"; };
 		410E9C2E2217EA5000F77FAD /* p2p.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = p2p.storyboard; sourceTree = "<group>"; };
 		410E9C302217EA7000F77FAD /* p2p_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p2p_ViewController.swift; sourceTree = "<group>"; };
+		410E9C322218201900F77FAD /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		410E9C342218206100F77FAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		410E9C36221820BB00F77FAD /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E868A55F220E46A0006F419B /* p2fack_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2fack_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E868A562220E46A0006F419B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E868A569220E46A6006F419B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,9 +163,12 @@
 		E868A587220FFC7F006F419B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				410E9C36221820BB00F77FAD /* TableViewCell.xib */,
 				E868A58E220FFD97006F419B /* Home.storyboard */,
 				E868A590220FFE15006F419B /* home_ViewController.swift */,
 				E868A5922211CDB5006F419B /* addHomeViewController.swift */,
+				410E9C322218201900F77FAD /* data.swift */,
+				410E9C342218206100F77FAD /* TableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				410E9C24221604B400F77FAD /* 黒い羊 2 .mp3 in Resources */,
+				410E9C37221820BB00F77FAD /* TableViewCell.xib in Resources */,
 				410E9C22221604B400F77FAD /* あんたは私の何を知る.mp3 in Resources */,
 				E868A580220FF2E3006F419B /* Calender.storyboard in Resources */,
 				410E9C2622160AF600F77FAD /* 僕は嫌だ.mp3 in Resources */,
@@ -267,8 +277,10 @@
 				E868A5932211CDB5006F419B /* addHomeViewController.swift in Sources */,
 				410E9C312217EA7000F77FAD /* p2p_ViewController.swift in Sources */,
 				E868A563220E46A0006F419B /* AppDelegate.swift in Sources */,
+				410E9C352218206100F77FAD /* TableViewCell.swift in Sources */,
 				410E9C2A2217254900F77FAD /* AVAudioSessionPatch.m in Sources */,
 				E868A58A220FFCD0006F419B /* voice_ViewController.swift in Sources */,
+				410E9C332218201900F77FAD /* data.swift in Sources */,
 				E868A591220FFE15006F419B /* home_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

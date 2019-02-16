@@ -96,7 +96,7 @@ class cale_ViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        
     }
     
     @IBAction func myActionZengetsu(_ sender: Any) {
